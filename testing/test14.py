@@ -928,4 +928,4 @@ if __name__ == "__main__":
     main()
 
     # Uncomment to run comparison
-    # comparison_with_test01()
+    comparison_with_test01()

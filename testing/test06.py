@@ -5,7 +5,6 @@ Read all properties from DE Apollo camera using PyScope interface instead of dir
 Based on the FastAPI router implementation but as a standalone script
 """
 
-import sys
 import os
 import json
 import time
@@ -96,7 +95,7 @@ class PyScope_DECamera_PropertiesReader:
             # Add DEAPI to path for direct access
             import sys
             sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-            import DEAPI
+            from pyscope import DEAPI
 
             # PyScope DE camera should have access to the underlying DEAPI client
             # Try different approaches to access the DEAPI client

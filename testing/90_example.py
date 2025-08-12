@@ -1,16 +1,9 @@
-import re
-import os
 import sys
-import numpy
-import struct
-import types
-import time
-import math
-from PIL import Image
 from time import sleep
-from datetime import datetime
+
 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-import DEAPI
+from pyscope import DEAPI
+
 
 def WaitAcqFinished():
     while(True):

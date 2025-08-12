@@ -1,7 +1,4 @@
 import sys
-import struct
-import types
-import time
 
 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
 import DEAPI

@@ -13,7 +13,7 @@ from datetime import datetime
 
 # Add DEAPI path
 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-import DEAPI
+from pyscope import DEAPI
 
 
 def connect_to_camera(host="localhost", port=13240):

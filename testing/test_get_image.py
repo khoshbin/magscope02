@@ -1,12 +1,9 @@
 import sys
 
 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-import DEAPI
+from pyscope import DEAPI
 
 import matplotlib.pyplot as plt
-import numpy as np
-from PIL import Image
-import cv2
 
 
 def acquire_and_display_image():

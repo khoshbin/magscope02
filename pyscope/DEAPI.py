@@ -1,13 +1,9 @@
 import socket
 import sys
-import math
 import struct
-import types
 import numpy
 import time
 import os
-import mmap
-import ctypes
 import logging
 from PIL import Image
 from enum import Enum
@@ -15,7 +11,7 @@ from enum import IntEnum
 import mmap
 from datetime import datetime
 from time import sleep
-from version import version
+from pyscope.version import version
 import re
 
 
@@ -1171,7 +1167,7 @@ class Client:
             for i in range(1000):
                 if self.GetProperty("Autosave Status") in ["Starting", "In Progress"]:
                     if not quiet:
-                        sys.stdout.write(".")
+                        sys.stdout.write("..")
                         sys.stdout.flush()
                     sleep(1)
                 else:
@@ -1579,11 +1575,10 @@ if int(pyVersion[0]) < 3:
     from cStringIO import StringIO # use string io to speed up, refer to http://www.skymind.com/~ocrow/python_string/
     import pb_2_3_0 as pb
 else:
-    from io import StringIO #use string io to speed up, refer to http://www.skymind.com/~ocrow/python_string/
     long = int  # python 3 no longer has int
     if  int(pyVersion[1]) >= 10:
         #import pb_3_19_3 as pb
-        import pb_3_23_3 as pb
+        from . import pb_3_23_3 as pb
     elif int(pyVersion[1]) >= 8:
         import pb_3_11_4 as pb
     else:

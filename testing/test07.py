@@ -11,7 +11,7 @@ from datetime import datetime
 
 # Add DEAPI path
 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-import DEAPI
+from pyscope import DEAPI
 
 
 def test_direct_deapi_properties():
@@ -132,7 +132,7 @@ def test_pyscope_with_deapi():
 
         # Now try to access DEAPI directly
         sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-        import DEAPI
+        import pyscope.DEAPI
 
         # Create separate DEAPI client
         client = DEAPI.Client()

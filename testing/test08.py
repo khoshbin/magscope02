@@ -182,7 +182,7 @@ class WorkingPyScope_DECamera_PropertiesReader:
             try:
                 # Add DEAPI to path
                 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-                import DEAPI
+                from pyscope import DEAPI
 
                 # Sometimes DE-Server allows multiple connections, let's try
                 client = DEAPI.Client()

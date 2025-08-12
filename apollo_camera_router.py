@@ -1,5 +1,4 @@
 from fastapi import APIRouter, HTTPException, Query, Path
-from fastapi.responses import Response
 from pydantic import BaseModel, Field
 from typing import Optional, List, Dict, Any, Union
 from enum import Enum
@@ -8,12 +7,11 @@ import numpy as np
 from io import BytesIO
 import base64
 import logging
-import time
 import asyncio
 
 # Add DEAPI to path
 sys.path += ["DEAPI", "..\\DEAPI", "../DEAPI"]
-import DEAPI
+from pyscope import DEAPI
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

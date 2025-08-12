@@ -1,0 +1,17 @@
+
+fastapi
+uvicorn
+pydantic[email]>=2.6.1
+
+Pillow
+tifffile
+
+scipy
+matlablib
+
+psutil
+pyyaml
+requests
+
+protobuf
+mrcfile
